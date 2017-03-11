@@ -41,17 +41,17 @@ public class ColTransDec
 
         int charCount = 0;
 
-        for (int i = 0; i < this.decryptionKey.length(); i++)
+        for (int i = 0; i < (int) Math.ceil((double) this.cipherText.length() / (double) this.decryptionKey.length()); i++)
         {
-            for (int j = 0; j < (int) Math.ceil((double) this.cipherText.length() / (double) this.decryptionKey.length()); j++)
+            for (int j = 0; j < this.decryptionKey.length(); j++)
             {
                 if (charCount < this.cipherText.length())
                 {
-                    msg[j][i] = String.valueOf(this.cipherText.charAt(charCount));
+                    msg[i][j] = String.valueOf(this.cipherText.charAt(charCount));
                 }
                 else
                 {
-                    msg[j][i] = "!";
+                    msg[i][j] = "!";
                 }
                 charCount++;
             }
@@ -87,7 +87,7 @@ public class ColTransDec
         {
             for (int j = 0; j < decryptionKey.length(); j++)
             {
-                plainText += (msg[j][i]);
+                plainText += (msg[i][j]);
             }
         }
 
@@ -120,7 +120,7 @@ public class ColTransDec
      */
     private void columnSwap(int left, int right)
     {
-        String tmp;
+        String tmp="";
 
         for (int i = 0; i < (int) Math.ceil((double) cipherText.length() / (double) decryptionKey.length()); i++)
         {
