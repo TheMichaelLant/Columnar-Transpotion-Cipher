@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17774711-8642-4e6c-976f-16adbc0223aa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ColTransDec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ColTransEnc.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/coldecv1.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,6 +40,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -58,6 +62,7 @@
         <option value="$PROJECT_DIR$/src/ColTransEnc.java" />
         <option value="$PROJECT_DIR$/ColTransEnc.txt" />
         <option value="$PROJECT_DIR$/src/ColTransDec.java" />
+        <option value="$PROJECT_DIR$/src/coldecv1.java" />
       </list>
     </option>
   </component>
@@ -450,6 +455,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="51" lean-forward="false" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/coldecv1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
