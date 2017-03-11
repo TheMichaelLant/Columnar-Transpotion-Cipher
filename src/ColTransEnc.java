@@ -2,10 +2,10 @@
  * @author Michael Lant
  * @version 1.0
  *
- * This encyption uses the Standard Variant of the Columnar Transposition Cipher.
+ * This encryption uses the Standard Variant of the Columnar Transposition Cipher.
  *
  * The plaintext is put into columns. If the plaintext does not fill the number
- * of columns given by the key, random filler plaintext is added.
+ * of columns given by the key, the remainder of the array is padded.
  *
  * The ending ciphertext is read out as one line.
  */
@@ -48,7 +48,8 @@ public class ColTransEnc
 
         int charCount = 0;
 
-        for (int i = 0; i < (int) Math.ceil((double) this.plainText.length() / (double) this.encryptionKey.length()); i++)
+        for (int i = 0; i < (int) Math.ceil((double) this.plainText.length() /
+                (double) this.encryptionKey.length()); i++)
         {
             for (int j = 0; j < this.encryptionKey.length(); j++)
             {
@@ -77,7 +78,6 @@ public class ColTransEnc
 
         columnSort();
 
-        // Construct ciphertext from message array
         for (int i = 0; i < (int) Math.ceil((double) plainText.length() / (double) encryptionKey.length()); i++)
         {
             for (int j = 0; j < encryptionKey.length(); j++)
@@ -119,7 +119,7 @@ public class ColTransEnc
         keyArray[left] = keyArray[right];
         keyArray[right] = temp;
 
-        String tmp = "";
+        String tmp;
         for (int i = 0; i < (int) Math.ceil((double) plainText.length() / (double) encryptionKey.length()); i++)
         {
             tmp = msg[i][left];
