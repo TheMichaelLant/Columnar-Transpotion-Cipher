@@ -75,7 +75,7 @@ public class ColTransDec
         keySort();
 
         // Print for visual representation of cipher (may be commented out)
-        System.out.println("\nCiphertext Input: " + cipherText);
+        System.out.println("\nCiphertext Input: " + cipherText + "\n");
 
         for (int i = 0; i < keyArray.length; i++)
         {
@@ -92,12 +92,21 @@ public class ColTransDec
             }
         }
 
+        // Print for visual representation of cipher (may be commented out)
+        System.out.println("Columnar Transposition Matrix (Solved): " + plainText + "\n");
+
         for (int i = 0; i < (int) Math.ceil((double) cipherText.length() / (double) decryptionKey.length()); i++)
         {
             for (int j = 0; j < decryptionKey.length(); j++)
             {
                 plainText += (msg[i][j]);
+
+                // Print for visual representation of cipher (may be commented out)
+                System.out.print(msg[i][j]);
             }
+
+            // Print for visual representation of cipher (may be commented out)
+            System.out.println();
         }
 
         // Print for visual representation of cipher (may be commented out)
