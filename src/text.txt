@@ -1,2 +1,2 @@
-This message is to be encrypted because i want to keep a secret from the
+this message is to be encrypted because i want to keep a secret from the
 rest of the world

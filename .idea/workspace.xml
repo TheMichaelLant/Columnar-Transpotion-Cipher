@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17774711-8642-4e6c-976f-16adbc0223aa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Columnar-Transposition-Cipher/com/company/coldecv1.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Columnar-Transposition-Cipher/ColTransDec.class" afterPath="$PROJECT_DIR$/out/production/Columnar-Transposition-Cipher/ColTransDec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Columnar-Transposition-Cipher/ColTransEnc.class" afterPath="$PROJECT_DIR$/out/production/Columnar-Transposition-Cipher/ColTransEnc.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ColTransDec.java" afterPath="$PROJECT_DIR$/src/ColTransDec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ColTransEnc.txt" afterPath="$PROJECT_DIR$/ColTransEnc.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ColTransEnc.java" afterPath="$PROJECT_DIR$/src/ColTransEnc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/text.txt" afterPath="$PROJECT_DIR$/src/text.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,21 +23,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ColTransDec.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ColTransDec.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="107" column="79" lean-forward="false" selection-start-line="107" selection-start-column="79" selection-end-line="107" selection-end-column="79" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,8 +46,9 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/ColTransEnc.txt" />
         <option value="$PROJECT_DIR$/src/coldecv1.java" />
-        <option value="$PROJECT_DIR$/src/ColTransEnc.java" />
         <option value="$PROJECT_DIR$/src/ColTransDec.java" />
+        <option value="$PROJECT_DIR$/src/ColTransEnc.java" />
+        <option value="$PROJECT_DIR$/src/text.txt" />
       </list>
     </option>
   </component>
@@ -417,13 +402,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/text.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -447,11 +425,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ColTransEnc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="58">
+          <caret line="87" column="41" lean-forward="true" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -459,8 +446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ColTransDec.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="107" column="79" lean-forward="false" selection-start-line="107" selection-start-column="79" selection-end-line="107" selection-end-column="79" />
+        <state relative-caret-position="-17">
+          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />

@@ -78,12 +78,20 @@ public class ColTransEnc
 
         columnSort();
 
+        // Print for visual representation of cipher (may be commented out)
+        System.out.println("\nColumnar Transposition Matrix (Transposed): \n");
+
         for (int i = 0; i < (int) Math.ceil((double) plainText.length() / (double) encryptionKey.length()); i++)
         {
             for (int j = 0; j < encryptionKey.length(); j++)
             {
                 cipherText += (msg[i][j]);
+
+                // Print for visual representation of cipher (may be commented out)
+                System.out.print(msg[i][j]);
             }
+            // Print for visual representation of cipher (may be commented out)
+            System.out.println();
         }
 
         // Print for visual representation of cipher (may be commented out)
