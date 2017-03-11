@@ -1,4 +1,7 @@
-package com.company;
+/**
+ * @author Michael Lant
+ * @version 1.0
+ */
 
 import java.io.File;
 import java.io.IOException;
@@ -56,12 +59,13 @@ public class Main
         {
             ColTransDec dec = new ColTransDec(message, key);
             dec.decryptOut();
-            System.out.println("Message successfully decrypted.");
+            System.out.println("\nMessage successfully decrypted.");
         }
         else
         {
             ColTransEnc enc = new ColTransEnc(message, key);
             enc.encryptOut();
+            System.out.println("\nMessage successfully encrypted.");
         }
     }
 }
