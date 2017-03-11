@@ -1,7 +1,15 @@
 /**
  * @author Michael Lant
  * @version 1.0
+ *
+ * This encryption uses the Standard Variant of the Columnar Transposition Cipher.
+ *
+ * The ciphertext is put into columns. The columns are arranged by the given
+ * decryption key.
+ *
+ * The ending plaintext is read out as one line.
  */
+
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -41,7 +49,8 @@ public class ColTransDec
 
         int charCount = 0;
 
-        for (int i = 0; i < (int) Math.ceil((double) this.cipherText.length() / (double) this.decryptionKey.length()); i++)
+        for (int i = 0; i < (int) Math.ceil((double) this.cipherText.length() /
+                (double) this.decryptionKey.length()); i++)
         {
             for (int j = 0; j < this.decryptionKey.length(); j++)
             {
@@ -120,7 +129,7 @@ public class ColTransDec
      */
     private void columnSwap(int left, int right)
     {
-        String tmp="";
+        String tmp;
 
         for (int i = 0; i < (int) Math.ceil((double) cipherText.length() / (double) decryptionKey.length()); i++)
         {
