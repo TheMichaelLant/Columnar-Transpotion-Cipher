@@ -7,10 +7,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main
-{
-    public static void main(String[] args) throws InterruptedException, IOException
-    {
+public class Main {
+    public static void main(String[] args) throws InterruptedException, IOException {
         Scanner input = new Scanner(System.in);
         Scanner loadMSG = null;
 
@@ -21,8 +19,7 @@ public class Main
 
         int choice = input.nextInt();
 
-        while ((choice<1) || (choice>2))
-        {
+        while ((choice < 1) || (choice > 2)) {
             System.out.println("\nPlease choose a valid option.");
             System.out.print("Action: ");
             choice = input.nextInt();
@@ -33,8 +30,7 @@ public class Main
         String location = input.next();
         File f = new File(location);
 
-        while (!f.exists())
-        {
+        while (!f.exists()) {
             System.out.println("That file does not exist.");
             System.out.print("Please enter the location of the file: ");
             location = input.next();
@@ -47,22 +43,18 @@ public class Main
         String message = "";
 
         System.out.println();
-        while (loadMSG.hasNext())
-        {
+        while (loadMSG.hasNext()) {
             message += loadMSG.next();
         }
 
         System.out.print("Please enter encryption key: ");
         String key = input.next();
 
-        if (choice==2)
-        {
+        if (choice == 2) {
             ColTransDec dec = new ColTransDec(message, key);
             dec.decryptOut();
             System.out.println("\nMessage successfully decrypted.");
-        }
-        else
-        {
+        } else {
             ColTransEnc enc = new ColTransEnc(message, key);
             enc.encryptOut();
             System.out.println("\nMessage successfully encrypted.");

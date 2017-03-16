@@ -15,8 +15,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.File;
 
-public class ColTransDec
-{
+public class ColTransDec {
     private String cipherText;
     private String decryptionKey;
     private String plainText;
@@ -27,19 +26,17 @@ public class ColTransDec
     /**
      * Constructs an object used to decrypt Columnar Transposition Ciphers.
      *
-     * @param cipherText  The message to be decrypted
+     * @param cipherText    The message to be decrypted
      * @param decryptionKey The decryption key
      */
-    protected ColTransDec(String cipherText, String decryptionKey)
-    {
-        this.plainText="";
+    protected ColTransDec(String cipherText, String decryptionKey) {
+        this.plainText = "";
         this.cipherText = cipherText;
         this.decryptionKey = decryptionKey;
         keyArray = new String[this.decryptionKey.length()];
         keyTemp = new String[this.decryptionKey.length()];
 
-        for (int i = 0; i < this.decryptionKey.length(); i++)
-        {
+        for (int i = 0; i < this.decryptionKey.length(); i++) {
             keyArray[i] = String.valueOf(this.decryptionKey.charAt(i));
             keyTemp[i] = String.valueOf(this.decryptionKey.charAt(i));
         }
@@ -56,16 +53,11 @@ public class ColTransDec
         int charCount = 0;
 
         for (int i = 0; i < (int) Math.ceil((double) this.cipherText.length() /
-                (double) this.decryptionKey.length()); i++)
-        {
-            for (int j = 0; j < this.decryptionKey.length(); j++)
-            {
-                if (charCount < this.cipherText.length())
-                {
+                (double) this.decryptionKey.length()); i++) {
+            for (int j = 0; j < this.decryptionKey.length(); j++) {
+                if (charCount < this.cipherText.length()) {
                     msg[i][j] = String.valueOf(this.cipherText.charAt(charCount));
-                }
-                else
-                {
+                } else {
                     msg[i][j] = "!";
                 }
                 charCount++;
@@ -82,18 +74,13 @@ public class ColTransDec
     /**
      * Checks and sorts the transposed columns using the encryption/decryption key.
      */
-    private void decrypt()
-    {
+    private void decrypt() {
         keySort();
 
-        for (int i = 0; i < keyArray.length; i++)
-        {
-            if (((keyArray[i]).compareTo(keyTemp[i]) != 0))
-            {
-                for (int j = i + 1; j < keyArray.length; j++)
-                {
-                    if (((keyArray[j]).compareTo(keyTemp[i]) == 0))
-                    {
+        for (int i = 0; i < keyArray.length; i++) {
+            if (((keyArray[i]).compareTo(keyTemp[i]) != 0)) {
+                for (int j = i + 1; j < keyArray.length; j++) {
+                    if (((keyArray[j]).compareTo(keyTemp[i]) == 0)) {
                         keySwap(i, j);
                         columnSwap(i, j);
                     }
@@ -104,10 +91,8 @@ public class ColTransDec
         // Print for visual representation of cipher (may be commented out)
         System.out.println("\nColumnar Transposition Matrix (Solved): " + plainText + "\n");
 
-        for (int i = 0; i < (int) Math.ceil((double) cipherText.length() / (double) decryptionKey.length()); i++)
-        {
-            for (int j = 0; j < decryptionKey.length(); j++)
-            {
+        for (int i = 0; i < (int) Math.ceil((double) cipherText.length() / (double) decryptionKey.length()); i++) {
+            for (int j = 0; j < decryptionKey.length(); j++) {
                 plainText += (msg[i][j]);
 
                 // Print for visual representation of cipher (may be commented out)
@@ -125,14 +110,10 @@ public class ColTransDec
     /**
      * Sorts the encryption/decryption key alphabetically.
      */
-    public void keySort()
-    {
-        for (int i = 0; i < keyArray.length; i++)
-        {
-            for (int j = 0; j < keyArray.length; j++)
-            {
-                if ((keyArray[i]).compareTo(keyArray[j]) < 0)
-                {
+    public void keySort() {
+        for (int i = 0; i < keyArray.length; i++) {
+            for (int j = 0; j < keyArray.length; j++) {
+                if ((keyArray[i]).compareTo(keyArray[j]) < 0) {
                     keySwap(i, j);
                 }
             }
@@ -145,12 +126,10 @@ public class ColTransDec
      * @param left  Column number that will be replacing right column
      * @param right Column number that will be replacing left column
      */
-    private void columnSwap(int left, int right)
-    {
+    private void columnSwap(int left, int right) {
         String tmp;
 
-        for (int i = 0; i < (int) Math.ceil((double) cipherText.length() / (double) decryptionKey.length()); i++)
-        {
+        for (int i = 0; i < (int) Math.ceil((double) cipherText.length() / (double) decryptionKey.length()); i++) {
             tmp = msg[i][left];
             msg[i][left] = msg[i][right];
             msg[i][right] = tmp;
@@ -163,8 +142,7 @@ public class ColTransDec
      * @param left  Column number that will be replacing right column
      * @param right Column number that will be replacing left column
      */
-    private void keySwap(int left, int right)
-    {
+    private void keySwap(int left, int right) {
         String temp = keyArray[left];
         keyArray[left] = keyArray[right];
         keyArray[right] = temp;
@@ -173,13 +151,11 @@ public class ColTransDec
     /**
      * Runs the decryption method and outputs the decrypted message to a text file.
      */
-    protected void decryptOut() throws IOException
-    {
+    protected void decryptOut() throws IOException {
         decrypt();
         DataOutputStream exc = new DataOutputStream(new FileOutputStream(new File("ColTransDec.txt")));
 
-        for (int i = 0; i < plainText.length(); i++)
-        {
+        for (int i = 0; i < plainText.length(); i++) {
             exc.writeByte(plainText.charAt(i));
         }
         exc.close();
