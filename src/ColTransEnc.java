@@ -46,6 +46,12 @@ public class ColTransEnc
         msg = new String[(int) Math.ceil((double) this.plainText.length() / (double) this.encryptionKey.length())]
                 [this.encryptionKey.length()];
 
+        // Print for visual representation of cipher (may be commented out)
+        System.out.println("\nPlaintext Input: " + plainText);
+
+        // Print for visual representation of cipher (may be commented out)
+        System.out.println("\nColumnar Transposition Matrix (Transposed): \n");
+
         int charCount = 0;
 
         for (int i = 0; i < (int) Math.ceil((double) this.plainText.length() /
@@ -64,7 +70,13 @@ public class ColTransEnc
                     msg[i][j] = String.valueOf(nullChar);
                 }
                 charCount++;
+
+                // Print for visual representation of cipher (may be commented out)
+                System.out.print(msg[i][j]);
             }
+
+            // Print for visual representation of cipher (may be commented out)
+            System.out.println();
         }
     }
 
@@ -73,13 +85,10 @@ public class ColTransEnc
      */
     private void encrypt() throws InterruptedException
     {
-        // Print for visual representation of cipher (may be commented out)
-        System.out.println("\nPlaintext Input: " + plainText);
-
         columnSort();
 
         // Print for visual representation of cipher (may be commented out)
-        System.out.println("\nColumnar Transposition Matrix (Transposed): \n");
+        System.out.println("\nColumnar Transposition Matrix: \n");
 
         for (int i = 0; i < (int) Math.ceil((double) plainText.length() / (double) encryptionKey.length()); i++)
         {

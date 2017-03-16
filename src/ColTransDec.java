@@ -47,6 +47,12 @@ public class ColTransDec
         msg = new String[(int) Math.ceil((double) this.cipherText.length() / (double) this.decryptionKey.length())]
                 [this.decryptionKey.length()];
 
+        // Print for visual representation of cipher (may be commented out)
+        System.out.println("\nCiphertext Input: " + cipherText + "\n");
+
+        // Print for visual representation of cipher (may be commented out)
+        System.out.println("Columnar Transposition Matrix (unsolved): " + plainText + "\n");
+
         int charCount = 0;
 
         for (int i = 0; i < (int) Math.ceil((double) this.cipherText.length() /
@@ -63,7 +69,13 @@ public class ColTransDec
                     msg[i][j] = "!";
                 }
                 charCount++;
+
+                // Print for visual representation of cipher (may be commented out)
+                System.out.print(msg[i][j]);
             }
+
+            // Print for visual representation of cipher (may be commented out)
+            System.out.println();
         }
     }
 
@@ -73,9 +85,6 @@ public class ColTransDec
     private void decrypt()
     {
         keySort();
-
-        // Print for visual representation of cipher (may be commented out)
-        System.out.println("\nCiphertext Input: " + cipherText + "\n");
 
         for (int i = 0; i < keyArray.length; i++)
         {
@@ -93,7 +102,7 @@ public class ColTransDec
         }
 
         // Print for visual representation of cipher (may be commented out)
-        System.out.println("Columnar Transposition Matrix (Solved): " + plainText + "\n");
+        System.out.println("\nColumnar Transposition Matrix (Solved): " + plainText + "\n");
 
         for (int i = 0; i < (int) Math.ceil((double) cipherText.length() / (double) decryptionKey.length()); i++)
         {
